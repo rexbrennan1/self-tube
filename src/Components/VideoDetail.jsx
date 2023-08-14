@@ -4,12 +4,11 @@ import ReactPlayer from "react-player";
 import { Typography, Box, Stack } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { Adsense } from "@ctrl/react-adsense";
-import { Videos, Loader, Ads} from "./";
+import { Loader } from "./";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 
 const VideoDetail = () => {
   const [videoDetail, setVideoDetail] = useState(null);
-  const [videos, setVideos] = useState(null);
   const { id } = useParams();
 
   useEffect(() => {

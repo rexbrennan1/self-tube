@@ -34,10 +34,11 @@ jobs:
 
       - name: Build Node assets
         env:
-          CI: false
+          CI: true
           SITE_URL: ${{ inputs.site-url }}
         run: |
-          CI=false npm run build
+          npm ci
+          npm run build
 
 # Please do not touch the following action
       - name: Store deployment content
